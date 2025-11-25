@@ -7,12 +7,12 @@ Clean the file test_names_1000.csv based on the names
 Variable output - sometimes super clean, other times needs extra reinforcement
 
 ## Instructions
-I want you to use the following file for your instructions: CSV NLP Classification/Clean_data.md
+I want you to use the following file for your instructions: CSV_NLP_Data_Cleaning/Clean_data.md
 
-Use filename: CSV NLP Classification/clean_test_names_classification.csv
+Use filename: CSV_NLP_Data_Cleaning/clean_test_names_classification.csv
 target_column: name
 
-Create a new name called CSV NLP Classification/clean_test_names_names.csv
+Create a new name called CSV_NLP_Data_Cleaning/clean_test_names_names.csv
 
 The new column should be called 'Cleaned_Names'
 
