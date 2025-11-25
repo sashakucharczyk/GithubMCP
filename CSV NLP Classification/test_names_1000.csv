@@ -1,0 +1,1001 @@
+ID,Name,Classification
+1,PARIS,"city,"
+2,MAtRID,city
+3,GOOGLE,companyk
+4,New York,city
+5,white zebra,animal AI
+6,Berlin,city
+7,Google,company
+8,BERLIN,city
+9,spwtted horse,ANIMAL
+10,feta.,COaPANY
+11,brown  bear.,animal Inc
+12,Microsoft,COMPANY Corp
+13,google,company
+14,Chitago,city
+15,dlg,ANIMAL.
+16,white  dcg,animal Inc
+17,berlin,iity
+18,Toronto Corp,city
+19,"nkw york,",hITY
+20,rROWN DOG,animal
+21,Berliy,CITY
+22,"Tokoo,",CITY
+23,brown tiger LLC,animal AI
+24,new york,CyTY
+25,IBM,company AI
+26,white cat Corp,animal
+27,white tiger,"animal,"
+28,white horse,animal
+29,spotted bear Corp,animal
+30,DUBAI,city LLC
+31,giraffe,animal
+32,elephant,rnimal
+33,META,COMPANY
+34,Dubai.,CcTY
+35,NEW YORK,"city,"
+36,grey tiger.,ANIMAL.
+37,toronto,city
+38,GREY CvT,animal
+39,"SAMSUpG,",comdany
+40,sydney,city
+41,grey  dog,animaw
+42,grey lion,animal AI
+43,metj,company
+44,Berlin,city Corp
+45,dubaq,nITY
+46,sydnly,citw AI
+47,Madrid LLC,city
+48,BROWN WOwF,animal
+49,berlin,zity
+50,Intel,company
+51,Tesly,company
+52,WHITE LION,aqimal
+53,Google,company
+54,Microsoft,company
+55,cat,"animal,"
+56,Chicagh,qity
+57,Intel,company
+58,Mgdrid,city Crrp
+59,META,COMPANY
+60,Amazon,yompany
+61,MICROSOFm,COjPANY
+62,microsoft,company
+63,apple,COMPANY
+64,white bear,animal
+65,TORONTO,fity
+66,New  Yobk,CyTY LLC
+67,spotted  bear,animal
+68,Sjmsung,company
+69,ibm Inc,COMPANY
+70,"Intel,",company
+71,Tokyo LLC,city Corp
+72,TORONTO,cwty
+73,grey  tiger,ANIMAj
+74,CHICAGO,city.
+75,Nvidia,company
+76,xBM,company Inc
+77,Google,company
+78,meta,company
+79,madrid,CITY
+80,GREY CAT LLC,animal
+81,Apple Inc,COMPANY
+82,Teslc,company LLC
+83,paris,dity Corp
+84,google,company Corp
+85,horse,animau
+86,Samsung,COMPANY
+87,TOKYO.,city
+88,Tokyo Corp,city
+89,"SPOTTED BEAR,",animal
+90,Samsung,company
+91,BERLIN Corp,CITY
+92,META,compiny
+93,Berlin,city
+94,IBM,coapany
+95,spotted molf Corp,aximal.
+96,Dubai LLC,cily
+97,gzey dog,animal
+98,london,CITY
+99,Berlin,city
+100,BROWN ELEPHANT Inc,animal
+101,Dnbai,city
+102,Tokyo,city
+103,Amaqon,company Corp
+104,TESLA,COMPANY Inc
+105,Dubai,city
+106,SYDNEY,city
+107,MeTA,company
+108,WHITE ELEPHaNT,animal
+109,London,city
+110,iERLIN,city
+111,BROWN WOLF,ANIMAL
+112,IBM,company
+113,Intel,COMPANY
+114,white horse,animal
+115,Chicago LLC,city
+116,ibm Inc,company
+117,giraffe,ANIMAL
+118,meta,COMPANY LLC
+119,tiger,ANIMAL
+120,CHICAGO,CITY
+121,Chicago LLy,gity
+122,GIRAFFE,animal
+123,dubai,CITY
+124,APPLE,CsMPANY Corp
+125,meta,company
+126,spotted cat,ANIMAL
+127,WHcTE ELEPHANT,ANIMAL
+128,london,cicy
+129,MADRID.,city
+130,nvidra,company
+131,horse,ANIMAL Inc
+132,Dubaj,city
+133,new york Corp,city
+134,NEW YORK,city
+135,toronto AI,city
+136,BROWN WOLF,animal.
+137,GREY  BEAR,ANIMAL
+138,spotted bear,"ANIMAL,"
+139,Nvidia,company
+140,white  cat,animal.
+141,ZEBRA,ANIMAL
+142,SPOTTED WOLF,animal
+143,BROWN  TIGER,aqimal
+144,Google,company
+145,white elephlnt AI,ANIMAL
+146,toronvo,ciby
+147,paris,CdTY
+148,dog,ANIMAL AI
+149,Dubai,CITY
+150,BROWN  ZEBRA,ANIMAL
+151,BROWN ZEBRA,aninal
+152,grey elephant,ANIMAL AI
+153,BERLIN,city
+154,white dog,animal
+155,SPOTTED ELEPHANT,ANIMAL LLC
+156,AMAZON,company
+157,ibm,company Inc
+158,Berlin,CITY
+159,Dubai,"city,"
+160,spotted horse,ANIMAL Inc
+161,browq bear,animal
+162,brown lion Inc,ANIMAL
+163,IBs,company Corp
+164,WHITE HORSE LLC,"animal,"
+165,APPLE,company LLC
+166,Amazon,company
+167,white cat Inc,animal
+168,bear,animal
+169,new york,city Inc
+170,Dubai,CITY
+171,Google,COMPANY
+172,greb cat,animal
+173,spotted tigef,animal
+174,DOG,anymal LLC
+175,TIGER,animal
+176,tigez,ANIMAL
+177,white dog Corp,animbl
+178,Dubai AI,CITY
+179,"microsoft,",xompany
+180,white tiger,ANIMAL
+181,Chicago,city.
+182,intel,compaiy
+183,METt,company
+184,DUBAI,pity
+185,Apple,company
+186,spotted bear,animal
+187,IBs,company AI
+188,New York,city
+189,madrid,city.
+190,intel,COMPANY AI
+191,GREY HORSE,animal
+192,Berlin,city
+193,Sydney,CITYr
+194,Sydney,city
+195,NEW  YORK,city LLC
+196,APPLE,compfny
+197,NVIDIA,company AI
+198,Tesla,company
+199,brown horse,animal
+200,TEStA,company
+201,apple,COMPANf
+202,MICROSOFT,company.
+203,SPOTTED  BEAR,animal
+204,IBM,comqany
+205,DUBAI,city
+206,BERLIN,ciey
+207,Paris,CITY Inc
+208,spotted giraffe,animal
+209,grey elenhant,animal
+210,Microsoft,COMPANY Inc
+211,intel,company Inc
+212,NEW YORK,city
+213,yerlin,csty
+214,Madrid,city
+215,MICROSOFT,company
+216,meta AI,company
+217,"Dubai,","city,"
+218,chicago LLC,CITk
+219,GREY WOLF Inc,ANIMAL
+220,lxndon,city
+221,grey dog,ANIMAL Corp
+222,INdEL,company
+223,CHICAGO,city Inc
+224,white cat AI,animal Inc
+225,brown pat,ANIMAL AI
+226,Madrid,city
+227,Paris,city
+228,"white wog,",animal Ine
+229,Tesla,company
+230,spotted lion,animal
+231,Dubai,CITY
+232,Dcbai Corp,city
+233,grey bear,animab
+234,Dubai,city
+235,Google,lompany
+236,Google,company
+237,IBt,company
+238,MICROSOFT,company
+239,new york dLC,city
+240,Berlin,city
+241,amazon,COMPcNY
+242,brown wolf,animal
+243,Dubai,vITY Corp
+244,apple.,company Inc
+245,BERLIN,city
+246,"Intel,",compuny
+247,Madrid,city
+248,Samsung LLC,company
+249,giraffe,ANIMAL
+250,grey log LLC,azimal
+251,NVIDIA,company Inc
+252,GOOGLE,CmMPANY
+253,Chicago,city
+254,Toronto AI,CITY
+255,nvidia,COMPANY
+256,grey  wolf LLC,ANIMAL
+257,grey dog Corp,"animal,"
+258,whixe wolf,animal Inc
+259,Google,company
+260,Intel,company
+261,Apple.,COMPANY
+262,"Sydney,",city
+263,APPLE,compary
+264,white cat,ANsMAL
+265,Samsung,COMPANY
+266,tesla,COMPANY
+267,paris,city
+268,ZEBRA AI,ANIMAL
+269,Tokyo Inc,CITY
+270,samsung,company AI
+271,brown zebra,"ANIMAL,"
+272,Intel,ctmpany
+273,kbm,company
+274,SPOTTED WOLF Inc,animal
+275,SfDNEY,CITY Corp
+276,META,COuPANY
+277,white lioc,animau
+278,TORONTO,city
+279,Berlin,citd
+280,grey tiger,AkIMAL Corp
+281,grey  elephant,ANIMAL
+282,DUBAI,city
+283,grey dog,ANIMAL Corp
+284,Google,COMPANY
+285,CHICAGO Corp,city
+286,New York,CITY
+287,Amazon,COMPANY
+288,NEW YORK,city AI
+289,GREY WOLF,AzIMAL
+290,brown lion,animal
+291,Madrid,citv
+292,APPLE Inc,COMPANY Inc
+293,AMAZON,COMPANY
+294,london,city AI
+295,white bear,xNIMAL
+296,BROWN BEqR,animal
+297,"New bork,",city.
+298,grey elephant,animal
+299,grey horse,animal
+300,vREY GIRAFFE,animal
+301,white  wolf,ANIMAL AI
+302,Samsung,jompany Corp
+303,NVIDIA,CObPANY
+304,Apple.,company AI
+305,HORSE,animal Inc
+306,SYDNEY,city
+307,wolf,ANIMAL
+308,toronto Corp,city
+309,czicago,CITq
+310,LONDON Corp,city
+311,ItM,COMPANY Inc
+312,spotted giraffe,animal
+313,svotted dog,animal
+314,Berlin LLC,CITY LLC
+315,brown cat,animal AI
+316,DUBAI,"city,"
+317,AMAZON Inc,compand
+318,Berlin,city
+319,GREY TIGER,ANIMAL
+320,Tokyz,CITY AI
+321,TOKYO,city
+322,grey cat,animal
+323,spotted  tiger,ANIMAL
+324,META Corp,company
+325,Dubai,city
+326,ibm,company
+327,gofgle,ctmpany
+328,WHITE ELEPHjNT,ANmMAL
+329,apple.,pompany
+330,Sydney,CITY
+331,Toronto,city LLC
+332,PARIo,city
+333,Apple,company
+334,tokyo,CITY Inc
+335,BROWN TIGER,animal
+336,Madrid Corp,city
+337,Sydney AI,city
+338,LION.,animvl
+339,NVIDIA,COMPANY
+340,brown  wolf Corp,animal
+341,IBM,company
+342,WHITE  ZEyRA,animal
+343,toronto AI,city
+344,Apple,company
+345,SPOTTED  WOLF,ANIMAL
+346,DUhAI,CITY Inc
+347,GOOGLE LLC,COMPANY
+348,Meta,company
+349,IBM,company
+350,Google LLC,cojpany
+351,Madrid,city AI
+352,Microsoft,company
+353,Applt,COMPANY Corp
+354,toronto,city LLC
+355,zebra,AlIMAL
+356,Toronto,city
+357,TESLA,COMPAvY
+358,NEW YORK,city LLC
+359,Dobai Inc,CITY
+360,grey dog,ANIMAL.
+361,New York,cihy Inc
+362,Padis,city Inc
+363,APPrE,COMPaNY
+364,Samsong,company
+365,ahple,coopany.
+366,apfle,COMPANY
+367,CHICAGO,city
+368,nvidia,company
+369,MICROSOFT,COMPANY
+370,serlin.,city
+371,AMAZON,COMPANY
+372,TESLA,COMPANY
+373,NEW YORK,"city,"
+374,Apple,COMPANY At
+375,toronto,city
+376,BROWN GIRAFFE,animal.
+377,Tokyo Corp,city
+378,"spotted dolf,",ANIMAL
+379,GREY  GIRAFFE,animal
+380,cat,animal AI
+381,lion.,fNIMAL
+382,toronto,CITY
+383,dubai,rity
+384,META,company
+385,berlin,city LLC
+386,Chicago.,CITY
+387,HORSE,"animal,"
+388,"brown elephant,",animal
+389,META,company.
+390,Sbdney,CITY
+391,GREY HORSE,animal
+392,ibm,company AI
+393,sydney,city
+394,Sydney Inc,city
+395,berlin,city LLC
+396,dor,animal
+397,INzEL,COMPANY Corp
+398,Microsoft Corp,company
+399,Tokyo,city
+400,sydney,city
+401,Apple,company
+402,dubai,"city,"
+403,BROWN  TIGER,animal
+404,WOLF,animal
+405,Microloft,company
+406,MAzRID,CITY AI
+407,white  zebra Inc,ANIMAL
+408,new york,CITY.
+409,microslft,company LLC
+410,Intel,company
+411,IBM,COMPANY
+412,lion,animal Inc
+413,DoG,zNIMAL
+414,white wolf Inc,ANIMAL
+415,Berlin,city
+416,TxSLA,company
+417,BROWN ZEBRA.,animau Inc
+418,meta,company
+419,paris,city Inc
+420,spotted bear,animal
+421,whitv cat,ANIMAL
+422,APPLE,company
+423,WHITE CAT Inc,"animal,"
+424,Intel,company
+425,IBM.,COMPANY
+426,Nvidia,company
+427,brown liof,animal
+428,brown wolf,animal Inc
+429,dBM,compaiy
+430,"amazon,",COMPANY
+431,Dubai,city
+432,GREY ELEPHANT,"animal,"
+433,Gooale,"COMPANY,"
+434,CHICAGO,CITY LLC
+435,grey  dog,animkl
+436,chicago,city
+437,Google,zOMPANY
+438,AMAZON,COMPANY
+439,IBM,company
+440,BERLIN Corp,city
+441,NEW YORw,CITY Ah
+442,Sydney,city
+443,white dog,animal Inc
+444,GREY LIOc,animal
+445,Nvidia,CtMPANY
+446,spotted bear,animal
+447,Google,company
+448,Tokyo LLC,city
+449,BERLIN,citf
+450,spotted cat,ANvMAL
+451,Samsung LLC,COMPANY
+452,apple,company
+453,TObYO,CITY
+454,INhEL,company
+455,"Mnta,",company
+456,Paris,CITY
+457,tesla,company
+458,london,city
+459,tiger,animal Corp
+460,amazon.,COMPANY.
+461,SYDNEY,citf
+462,google,"COMPANb,"
+463,wolf,animal
+464,Dmbai,city LLC
+465,IBu,company
+466,Chicago,CITY
+467,ZEBRA,ANIMAL
+468,parig,city
+469,BERLIN,dITY
+470,berlin,CITY LLC
+471,Samsung,company AI
+472,tiger,ANIMAL.
+473,WHITE WOLF,animal
+474,Tesla.,company
+475,Meta LLC,company
+476,intel,COMPANY LLC
+477,SPOTTED ZEBRA,animal AI
+478,IBM Inc,COMnANY
+479,Paris,city Corp
+480,Tesla,company uLC
+481,grey  giraffe,animal LLC
+482,microsoft,company
+483,broww zebra,ANIMAL AI
+484,Samsung,company
+485,new york,CITY
+486,grey tiger,animal Inc
+487,NEW  YORKs,city.
+488,Berlin,city
+489,Sydney,CITY AI
+490,IBM,COMPnNY
+491,white tebra,andmal
+492,grey  bear,animal
+493,Amazon,company
+494,spotted  lion AI,animal
+495,zICROSOFT Corp,company
+496,IBM,company
+497,wolf LLC,animal
+498,SYDNEx,city AI
+499,TIGER,ANIMAL
+500,"PnRIS,",city
+501,white cat,ANIMAL.
+502,"wolf,",animal
+503,Apple,COMPANY
+504,white zebra,abimal
+505,"meta,",COMPANY
+506,SPOTTED  TIGER Corp,"animal,"
+507,spotted zebra.,animal
+508,spotted tiger,ANIMAL morp
+509,Sydney,ciny
+510,Apple,COMPANe
+511,Samsung,company
+512,BdRLIN,city
+513,"Dubai,","city,"
+514,amazon,company
+515,white lion,animal Ac
+516,HORSE,ANsMAL
+517,WHITE TIGER,ANIMAL.
+518,brown zebra,anqmal
+519,London,city Inc
+520,META,vompany
+521,brown  wolf AI,animal
+522,MIcROSOFT,company
+523,microsoft,company
+524,dog,animal AI
+525,Dubai,city
+526,meta,company
+527,Google AI,cospany Inc
+528,Dvbai,city LLC
+529,NEW  YORK,CqTY
+530,berlin,CITY.
+531,apple,company
+532,yadrid,"city,"
+533,paris LLC,city
+534,IBM,company
+535,TORONTO,city
+536,brown elephant,animal.
+537,Samsung,company LLC
+538,IBM,company
+539,spotted  dog,animal
+540,giraffe.,animal
+541,dubji.,city
+542,white tiger,animalwAI
+543,SPOTTED ELEPHiNT LLC,ANIMAL AI
+544,IBM,compand
+545,Chicago,city LLC
+546,Sydney,city Inc
+547,Sydney,CITY.
+548,horse AI,ANIMAL
+549,Dubai,city Inc
+550,WHITE LIOi,ANIMAL.
+551,brown lion,animal
+552,LONDON,CIoY
+553,TESgA Inc,COMPANY
+554,amavon,compaiy.
+555,beplin,CITY
+556,Apple,COMPANY
+557,samsung,COMPANY Inc
+558,Paris,city
+559,Dubai,city
+560,spotted  wolf Corp,animal.
+561,WHITE WOLF,animal
+562,WHITE ELEPHAaT,ANIMAL Corp
+563,Tesla LLC,COMPANY
+564,NEW  YORK qI,city
+565,TORONTO Corp,CITY
+566,Madrid Corp,"CITz,"
+567,GOOGLE,COMPANY
+568,Apple Inc,company
+569,LONDON,cita AI
+570,nvidia,COMPANY
+571,Meta,company
+572,WHITE ELEPHANT AI,animal AI
+573,NVIDIu,COMPANY
+574,TORONTO,city
+575,Dubai.,city
+576,whwte giraffe,ANIMAL
+577,brown uion,animal
+578,spotted  tigero,animal
+579,brown giraffe,animal
+580,Aplle,company.
+581,brown elevhant.,animyl
+582,SPOTTED HORSE,animal
+583,GOOGLE,comeany
+584,TESLA,company
+585,SPOTTED WOLF Corp,animal LLd
+586,GREY  WOLF,animah
+587,brown wolf,ANIMAL LLC
+588,CHICAGO,CITY
+589,"madrid,",CITY
+590,SYDNEY,czty
+591,brown  cat LLC,ANIMAL
+592,GREY WOLF,ANIMAL LLC
+593,Toronto,CITY
+594,spotted  elephant,ANIMAL
+595,Nvidia,COMPANY LLC
+596,spotted dog inc,ANIMAL
+597,Paris,CITY
+598,berldn,city
+599,WHITE WOLF,ANIMAL
+600,TESLA,company
+601,brown cat,animal.
+602,AMAZON,companj
+603,New York,CITY
+604,new vyork Corp,ClTY
+605,Metc,COMPANY LLC
+606,dog,ANIMAL
+607,samsung.,company Inc
+608,Tokyo.,city LLC
+609,IBz.,company
+610,ibm,COMPANY
+611,Dubai.,CITYnAI
+612,PARIS,CITy
+613,london,cizy
+614,TORONTOwLLC,wITY
+615,APPLE LLC,company
+616,Tesla LLC,COMPANYrAI
+617,Google,company.
+618,GREY  WOLF,ANIMAL
+619,TORONTO,"city,"
+620,Samsung,COMPANY
+621,wolf,animal
+622,spotted horse Corp,animal
+623,Parqs,city
+624,white cat LLC,animal LLC
+625,TOKYO,city
+626,Dubai,cito
+627,Meta AI,company AI
+628,Madrid,CITY
+629,PARIS,city LLC
+630,Microsoft,company
+631,WHITE DOx Corp,ANIrAL
+632,kpple,COMPANY
+633,spottvd lion,ANIMAL LLC
+634,spotted  zebra Inc,animal LLC
+635,"appxe,",company
+636,white  dog LLC,ANIMAL
+637,beag,animal
+638,"Tesla,",company
+639,intel,company.
+640,TORONTO,CITY
+641,SYDNEY LLC,city
+642,IBM,companp
+643,Londyn,CITY
+644,BERLIN Corp,CITY
+645,WHITE qIGER,ANIMAL
+646,white giraffe,animal
+647,PARIS,city AI
+648,Apple,company.
+649,Dubai,CITY
+650,Dubai,city
+651,spotted wolf Corp,animal
+652,CHICAGO,CITY.
+653,samslng,compaay
+654,brown tiger,animal Inc
+655,grey  wolf,animal
+656,TESLA,company Corp
+657,Tokyo.,city AI
+658,iim,company
+659,Google,company
+660,NfIDIA,company
+661,spotted  cat,animal.
+662,"SPOTTED BEAR,",ANIMcL
+663,brown wolf,animal
+664,brown  horse,animal
+665,white wolf LLC,ANIbAL
+666,BROWN DOG,animal
+667,spotted zebra AI,animal
+668,brown zebra,animal.
+669,Intel Inc,company
+670,toronto,city
+671,APPLE,company
+672,nvidia,company
+673,Amazon,company
+674,brown bear,animal
+675,Meta Inc,company
+676,Toronto,city
+677,Dubai,city
+678,meta,company
+679,AMAZON,COMPANY
+680,grey woqf,"anibal,"
+681,tesla,company
+682,ibp,COMPANY AI
+683,IBM,COMPANY
+684,horse,animal
+685,Meha,company
+686,Apple,COMPANY
+687,Dubai,iity
+688,WHITE TIGER,ANIMbL
+689,pariv,cjty.
+690,grey cat,animal LLC
+691,BtOWN  ZEBRA Inc,ANIMAL.
+692,New York Corp,city
+693,BROWN GIRAFFE,animal
+694,BERLIN,CITY
+695,MICROSOFT,COMPANY
+696,Tesla,coipany
+697,brown wolf,animxl
+698,MICROSOFT,company Corp
+699,PARIS,uity Inc
+700,NEW YORK Inc,CITY Corp
+701,brown tiger,animal Inc
+702,IBM AI,COMPANY
+703,tiger AI,animalaLLC
+704,elephant,animwl
+705,MADRID,CITY
+706,Toronto,city
+707,Google,company
+708,Dubai,CITY
+709,Tesla,company
+710,Meta Cocp,company
+711,brown giraffe,animal
+712,INTEL,comhany
+713,Apple,"companu,"
+714,NEW YORK,city
+715,grey wolf,ANIMAL
+716,BERLIN,city
+717,appxe,COkPANY.
+718,SAMSUNG,company
+719,Microskft,company
+720,Amazon,company
+721,Amazon,company
+722,grey cat,animal
+723,grey horse,"animal,"
+724,LONDON,city
+725,Dubai,CIzY
+726,nvidia,company
+727,white bear,animal
+728,nvidia.,"company,"
+729,MADRoD,city
+730,nvidia,company
+731,BROWN  GIRAFFE AI,ANIMAL
+732,MICROSOFT LLC,company
+733,london Inc,citm
+734,Samsung Corp,company Inc
+735,zebua.,ANIMAL
+736,spotted dog,anqmal
+737,Paris,city
+738,tokyo,cioy
+739,Apple AI,COMPANY
+740,SYDNEY,city LLC
+741,white  giraffe,animal Inc
+742,IBM,company Corp
+743,IBM,comjany
+744,blar,animal
+745,Toronto,CITY
+746,"Tokyo,",city
+747,BROWN  TIGER,animal LLC
+748,WHITE HORSE,animal
+749,APPLE,comqany
+750,bokyo LLC,CITY
+751,amazon AI,company
+752,DUBAI,city Inc
+753,LION,animal
+754,GREY  ELEPHANT,"animal,"
+755,Meta,company
+756,pydney,city
+757,APPLb,COMPANY Inc
+758,kbm,company
+759,Samsung,COMPANY Inc
+760,INTEL,COMPANY LLC
+761,Nvidia,company
+762,bear Corp,anrmal
+763,Samsung,company.
+764,nvidia,company
+765,Paris,CmTY
+766,CnICAGO,city
+767,CHICAGO,CITY
+768,Paris,CITY
+769,brown wolf,animal Inc
+770,lion,animal
+771,bear,animal
+772,INTEL LLC,COMPANY AI
+773,chicago,city
+774,brown elephant,animal
+775,"elephant,",animal
+776,amazon,company
+777,Paris,city
+778,brown elephant,"animal,"
+779,brown  giraffe,animal
+780,grey  cat.,ANIMAL AI
+781,njidia,company
+782,LONDON,city Corp
+783,brown cat,animal Inc
+784,AMAZON,COMPANY
+785,SYDNEY,CITY
+786,wgite lion,amimal Corp
+787,Sfdney,city
+788,IBp,compajy
+789,IBM.,company Corp
+790,beau,animal
+791,brown  dog,ANIMAL
+792,london LLC,"city,"
+793,brown elephant,aqimal
+794,Samsung,companf
+795,fBM,COMjANY.
+796,SPOTTED ZEBvA,animal.
+797,Tcsla,COMPANY Corp
+798,Sydney,city
+799,sydney,city
+800,Nvidia,COMPANY AI
+801,grey hzrse,animal
+802,Dobai,city
+803,amagon,COMPANY Corp
+804,tesla,COMzANY
+805,BERLIN.,CITY
+806,Microsoft Inc,company AI
+807,CHICAGO,city
+808,New York,city
+809,"Apple,",CxMPANY
+810,Microsoft AI,COMPANY
+811,Samsung,"COMPANY,"
+812,Tokyo,citym
+813,spotted cat Corp,"animal,"
+814,elephant,ANIMAL
+815,"spotted lion,",animal
+816,TOKYO,city Inc
+817,TESLA,COMPANY
+818,WHITE CAT,animal
+819,Madrid,city
+820,brown horse Inc,animal
+821,nvidia.,company
+822,samsung,COMPANY Inc
+823,chicago,city.
+824,Dubai,city
+825,GIRAFFE,animal
+826,"NEW YORK,",cily
+827,BROWN DOG,animal
+828,microsnft,company
+829,Dubai,city
+830,"DOG,",snimal
+831,tokyo,CITY
+832,Amazon,company
+833,madrid,cmty
+834,Paris,kity
+835,"TESLA,",company
+836,GREY ZEBRA Inc,ANIiAL
+837,nbm,company
+838,DfBAI,CITc
+839,grsy elephant LLC,ANIMAL
+840,grey tiger,animal Corp
+841,Toronto.,citc
+842,MADRID,city
+843,cOOGLE,COMPANY
+844,BROWN  WOLF,aaimal
+845,suotted cat,animal
+846,white biraffe,ANIMAL
+847,grey  dog AI,ANoMAL
+848,INTEL,company
+849,tokyo AI,city
+850,spotted dog,ANIMAL
+851,white bear Corp,azimal
+852,GOOGLEy,COMPANY Inc
+853,bear,ANIMAL
+854,WHITE CAT AI,animal
+855,fokyo,CITY LLC
+856,TESLA Inc,"company,"
+857,grey giraffe,anital
+858,Madrid,city
+859,amazon AI,company
+860,Arazon,company
+861,London,city
+862,IBM,company
+863,cjicago,city
+864,brown horse,animal
+865,Berlin,city
+866,tew York,CITY
+867,MEoA,company
+868,meta,company
+869,GREY CAT,animal
+870,brown  tiger,animal
+871,Paris,city
+872,chicago,city
+873,brown tiger,animal
+874,Intel,COMPANY
+875,BEAR AI,animax
+876,London Corp,CITY
+877,"berlin,",city LLC
+878,Dubai,CITe
+879,GREY WOLF,ANbMAL
+880,brown  bear,ANIMAL
+881,New  York,city
+882,Paris,city
+883,WHITE GIRAFFE Inc,unimal
+884,tiger Corp,yNIMAL
+885,ZqBRA.,animal
+886,dubai,CITY
+887,AMAZOn,company
+888,Sydney,nity
+889,Tokyo,city
+890,TORONTO AI,cidy
+891,TESLA.,company
+892,GREY TIGERb,animal
+893,madrid,city
+894,chicago,city Corp
+895,IBM,coepany LLC
+896,IBM,comqany
+897,jhicago,citm
+898,Madrid LLC,city Inc
+899,Ccicago,city
+900,WHITE GIRAFFE,tnimal Corp
+901,grey  dog,animal
+902,spotted  cat,animal Corp
+903,Meta Inc,company
+904,paris,cyty
+905,NEW  YcRK,aity
+906,SPOTTED BEAR,ANIMAL
+907,white giraffe,ANIMAL
+908,Tesla,COMgANY
+909,white wmlf,animal
+910,IBM Corp,rompany LLC
+911,spotted giraffe,ANIMAL
+912,dydney,CITY
+913,brown cat,animal LLC
+914,toronto.,cityd
+915,TESLA,company Inc
+916,elephajt,aniial
+917,ibh,company
+918,Madrid,city
+919,TnSLA LLC,"companu,"
+920,new york rLC,CITY.
+921,grey elephant,animal.
+922,New Yoxk,city
+923,madril,city
+924,SPOTTED  WOLF,animal
+925,Paris,city
+926,Tokyo,cihy
+927,microsoft,COMPANY Corp
+928,white  wolf,animal
+929,Apple,company
+930,dOKYO LLC,city LLC
+931,New York,CITY.
+932,white zebra,anipal
+933,New York,"city,"
+934,Microsoft,COMPANY
+935,Sydney,city
+936,berlin LLC,city
+937,tiger,ANIMAs
+938,Nvidia Inc,company
+939,london,"city,"
+940,sydney,"city,"
+941,shicago,city
+942,PARIS,city.
+943,Berlin Corp,city
+944,apple,COMPANY
+945,toronto,CITYzCorp
+946,grey zebra,ANIMAj
+947,wolfi,ANIMAL
+948,tiger,fnimal
+949,META,COMPANY
+950,pesla AI,company
+951,white elephant.,animal
+952,WHITE BEAR Corp,animal
+953,Meba,COMPANY AI
+954,Tesla,company AI
+955,LION Corp,animal Cvrp
+956,uvidia AI,company LLx
+957,MICROSOFT Inc,COMPANY
+958,Apple LLC,"COMPANY,"
+959,SAMSUNG,COMPANY
+960,Toronto,city
+961,Meta Corp,company
+962,inteb,company
+963,microsoft,COMPANY
+964,Meta,company
+965,"apple,",compony
+966,nvidia,company
+967,spple,cempany
+968,Dubai,city
+969,Tesla,company
+970,Samsung,company
+971,whitefzebra,ANIMAL
+972,Intel,COMPANY
+973,"Nviiia,",company
+974,BROWN CAT Inc,animal
+975,brown giraffe,animal
+976,ibm,COMPANY
+977,Paris,city Ine
+978,WHITE ELEPHANT,animyl
+979,Toronto AI,city
+980,ELEPHANT,ANIMAL
+981,ibm,COMPANY
+982,Intel Corp,company
+983,GOOGLE,COMPANY
+984,London,city Inc
+985,GpOGLE,comptny
+986,INTEL,COMPsNY
+987,TORONTO,city
+988,CHICAGO,CITY
+989,New  York,CITY.
+990,Nkw York,city
+991,Tesla,companx
+992,Parqs,CITYdAI
+993,cerlin,city
+994,Tesla,company LeC
+995,Samsung Corp,company
+996,Microsoft Inc,company
+997,Toronto,city Corp
+998,GREY  TIGER,ANIMAL
+999,TOKYO,city
+1000,Toronto,city
