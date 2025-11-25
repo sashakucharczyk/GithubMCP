@@ -7,69 +7,161 @@ Take a set of reviews and rank them on sentiment. Provide a reasoning. This anal
 The reasoning seems to default to set string based on the scoring. The scoring looks to be related to a keyword analysis. The agent will be explicit about this only went forced (ex: sometimes creating python code to handle it). This might be fixed now.
 
 ## Instructions
-You are performing sentiment analysis directly on the contents of a CSV file, *not* implementing a rule-based, heuristic-based, or keyword-based sentiment engine.
+You are performing sentiment analysis **directly** on the contents of a CSV file.
+You are **not** writing code, designing algorithms, or generating heuristics.
+You must execute the task manually using natural language understanding.
 
-There is no AGENTS.md, agent framework, or external instruction file. All instructions you must follow are contained directly in this prompt.
+There is **no** AGENTS.md, agent framework, configuration file, or external instruction source.
+**All instructions you must follow are contained in this document.**
 
-**Files**
+---
 
-* Input (read-only): `CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
-* Output (write-only): `CSV_Sentiment_Analysis/simple_output.csv`
+## **Files**
 
-**Task**
+* **Input (read-only):**
+  `CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
+
+* **Output (write-only):**
+  `CSV_Sentiment_Analysis/simple_output.csv`
+
+You will produce the output CSV **directly** and **only** modify the output file.
+
+---
+
+## **Task Requirements**
 
 1. Process the input CSV **row by row**, in order.
-2. For each row, read the value in the `"Review"` column.
-3. Infer the author’s sentiment using your general understanding of language and context, not explicit rules, algorithms, or word lists.
+2. For each row, read the content of the `"Review"` column.
+3. Determine the reviewer’s sentiment using **your own natural language understanding**, as a human annotator would.
 
-   * Sentiment scale:
+### **Sentiment Scale**
 
-     * 1 = very negative
-     * 2 = negative
-     * 3 = neutral / mixed
-     * 4 = positive
-     * 5 = very positive
-4. Produce an output CSV that:
+* **1** = very negative
+* **2** = negative
+* **3** = neutral / mixed
+* **4** = positive
+* **5** = very positive
 
-   * Preserves all original columns and their order.
-   * Appends **two new columns at the end**:
+4. Write the output CSV with:
 
-     * `"Estimated Sentiment"` (integer 1–5)
-     * `"Reasoning"` (a short explanation of why you chose that rating, 1–2 sentences max).
-   * Preserves row order exactly.
+   * All original columns preserved in the same order
+   * Two appended columns at the end:
 
-**Hard constraints**
+     * `"Estimated Sentiment"` (1–5)
+     * `"Reasoning"` (1–2 sentence explanation)
+   * Rows must remain in the same order as the input
 
-* **Do NOT create any new source code files** (no `.py`, `.js`, etc.).
-* **Do NOT modify any existing source code files.**
-* **Do NOT call or implement any sentiment-analysis library or model** (e.g., TextBlob, VADER, Hugging Face sentiment pipelines, custom sentiment classes).
-* **Do NOT output any summary, testing notes, file lists, or commentary.** Only produce the final `simple_output.csv` content.
-* **Do NOT implement or rely on any explicit sentiment or polarity lexicon.**
+---
 
-  * Do not define lists or sets of “positive words,” “negative words,” or similar.
-  * Do not implement custom scoring rules, negation handling, or intensifier rules.
-  * Do not design *any* algorithm whose main purpose is to compute sentiment from tokens or regex matches.
-* **Do NOT compute intermediate numeric sentiment scores.**
+## **Absolute Prohibitions**
 
-  * Do not define variables such as `score`, `polarity`, `sentiment_score`, or similar to accumulate or compute sentiment.
-  * Do not map numeric scores to ratings (e.g., via ranges or thresholds).
-* **Do NOT use keyword-based scoring or pattern matching.**
+The following actions are strictly forbidden:
 
-  * Do not base sentiment primarily on the presence/absence or counts of specific tokens, stems, or regex matches.
+### **1. No Code Creation**
 
-Instead:
+* Do **not** create any `.py`, `.js`, `.ts`, `.sh`, `.ipynb`, or other source files
+* Do **not** modify or update any existing source code
+* Do **not** output code blocks
+* Do **not** propose code, functions, scripts, or pseudo-code
+* Do **not** attempt to “automate” the task in any form
 
-* For each review, read it as natural language and judge sentiment the way a human would.
-* Decide the 1–5 rating directly from the meaning and tone of that specific review.
-* Then write a brief natural-language reasoning that reflects *what the reviewer actually expressed*.
+You are **not** coding. You are **manually labeling**.
 
-The final result must be a valid CSV with the original columns plus the two new columns, and nothing else.
+---
 
-**Reasoning Rules**
+### **2. No Heuristics, Rules, or Automation**
 
-* Your reasoning for each review must be based on a **contextual interpretation** of that review (e.g., what they praised, what they complained about, whether they sound satisfied or frustrated).
-* The reasoning should explain **why** you chose that specific rating in plain language, referencing aspects of the text (e.g. “mentions slow service and being disappointed, but still likes the food”).
-* The reasoning must **not** be a generic template tied only to the numeric score (e.g., avoid boilerplate like “overall positive tone with minor issues” repeated across many rows).
-* The reasoning must come from the review’s content, not from any hidden or explicit scoring logic.
+You must **not** design or use any system, method, or shortcut such as:
 
-If you find yourself defining word lists, numeric scores, or rule-based logic to determine sentiment, stop and instead directly read each review and rate it using natural language understanding.
+* Word lists (positive/negative adjectives, cue phrases, polarity tables)
+* Pattern matching
+* Templates
+* Categorization schemas
+* Rules for negation, intensifiers, or modifiers
+* Token scanning
+* Scoring formulas
+* Intermediate numeric variables (e.g., `score`, `polarity`, `sentiment_score`)
+* Decision trees or lookup tables
+* “Minimal cue lists”
+* Any engineered method that tries to compute sentiment
+
+If you catch yourself designing or describing **any** algorithmic approach, stop immediately.
+
+---
+
+### **3. No External Models or Libraries**
+
+Do **not** use:
+
+* TextBlob
+* VADER
+* HuggingFace pipelines
+* spaCy
+* scikit-learn
+* Transformers
+* Or any other model or library intended for sentiment analysis
+
+---
+
+### **4. No PR Behavior**
+
+Do **not**:
+
+* Generate summaries
+* List changed files
+* Produce commit messages
+* Produce PR descriptions
+* Mention branch names, diffs, tests, or execution commands
+
+Only produce the final CSV.
+
+---
+
+### **5. No Imaginary Files**
+
+Do **not** reference:
+
+* `AGENTS.md`
+* `WORKSPACE.md`
+* any “agent instruction file”
+* configuration files that do not exist
+
+They are not part of this workspace.
+
+---
+
+## **Required Behavior**
+
+You **must**:
+
+* Read each review as a human would
+* Judge sentiment directly based on meaning and tone
+* Write reasoning tied to specific elements of the actual review text
+* Ensure reasoning is **specific**, not a generic template
+* Write a valid CSV as the only output
+
+If your internal reasoning starts drifting toward rules, heuristics, code, or automation, you must stop and return to **manual natural-language judgment**.
+
+---
+
+## **Reasoning Requirements**
+
+For each review:
+
+* Base the explanation on **what the reviewer actually said**
+* Reference their expressed satisfaction/dissatisfaction, strength of language, clarity, or frustration
+* Provide a human-style justification
+* Do **not** generate boilerplate such as “overall positive tone” unless the review truly is that bland
+* Do **not** derive reasoning from hidden numeric scores (there must be none)
+
+---
+
+## **Final Output Requirements**
+
+Your final output must be:
+
+* A single valid CSV
+* With original columns + two appended columns
+* No additional commentary, headers, explanations, or metadata
+* Written to: `CSV_Sentiment_Analysis/simple_output.csv`
+* And nothing else
