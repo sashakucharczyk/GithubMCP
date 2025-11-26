@@ -1,5 +1,8 @@
 # CSV NLP Classification Summary
 
+## Comentary:
+Old file. First skill to be made so the summary/design file is dated and basic.
+
 ## Goal:
 Tools that allow NLP classification on csv (or similar) files.
 
