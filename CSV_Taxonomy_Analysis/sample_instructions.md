@@ -1,6 +1,7 @@
 ## Purpose ##
 
 ## Known Issues ##
+Sampling too large of a subset for the taxonomy causes Codex to crash. Unsure about other CLIs.
 
 ## Instructions ##
 Use the instructions in `CSV_Taxonomy_Analysis/tools/taxonomy_driver.py` 
