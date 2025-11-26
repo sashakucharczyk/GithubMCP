@@ -7,14 +7,14 @@ It exists to give structure to how the model should think about the task.
 The actual taxonomy induction and row-level classification are performed manually
 by the model, using natural language understanding and following the rules defined in:
 
-    CSV_Taxonomy_Analysis/tools/TAXONOMY_INDUCTOR.md
+    skills/CSV_Taxonomy_Analysis/tools/TAXONOMY_INDUCTOR.md
 
 No code-based taxonomy logic, clustering, or classification is allowed.
 """
 
-INPUT_PATH = "CSV_Taxonomy_Analysis/raw_input.csv"
-TAXONOMY_PATH = "CSV_Taxonomy_Analysis/taxonomy.csv"
-LABELED_OUTPUT_PATH = "CSV_Taxonomy_Analysis/labeled_output.csv"
+INPUT_PATH = "skills/CSV_Taxonomy_Analysis/raw_input.csv"
+TAXONOMY_PATH = "skills/CSV_Taxonomy_Analysis/taxonomy.csv"
+LABELED_OUTPUT_PATH = "skills/CSV_Taxonomy_Analysis/labeled_output.csv"
 
 # Conceptual maximum chunk size for row-wise work. This is for mental structure only.
 CHUNK_SIZE = 50

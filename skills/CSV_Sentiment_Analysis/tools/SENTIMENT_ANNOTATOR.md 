@@ -13,8 +13,8 @@ and the comments/docstrings in `sentiment_driver.py`.
 
 ## Parameters for this task
 
-- Input CSV (read-only): `CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
-- Output CSV (write-only): `CSV_Sentiment_Analysis/simple_output.csv`
+- Input CSV (read-only): `skills/CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
+- Output CSV (write-only): `skills/CSV_Sentiment_Analysis/sample_output.csv`
 - Text column: `Review`
 
 Ignore any other CSVs (including any that contain prior sentiment labels or scores).
@@ -88,7 +88,7 @@ If you find yourself designing or describing such mechanisms, **stop** and inste
 
 - Do **not** output summaries, commit messages, testing notes, file lists, or PR descriptions.  
 - Do **not** reference non-existent files like `AGENTS.md` or `WORKSPACE.md`.  
-- Only produce the final CSV content in `simple_output.csv`.
+- Only produce the final CSV content in `sample_output.csv`.
 
 ---
 
@@ -109,6 +109,6 @@ For each row:
 
 Your final output must be a valid CSV file:
 
-- Path: `CSV_Sentiment_Analysis/simple_output.csv`  
+- Path: `skills/CSV_Sentiment_Analysis/sample_output.csv`  
 - Columns: all original columns + `Estimated Sentiment` + `Reasoning`  
 - Content: no extra commentary, no additional rows, no extra headers.

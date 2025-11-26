@@ -20,9 +20,9 @@ Two outputs:
 
 Separate file, e.g.:
 
-* `CSV_Taxonomy_Analysis/taxonomy.csv`
+* `skills/CSV_Taxonomy_Analysis/taxonomy.csv`
   or
-* `CSV_Taxonomy_Analysis/taxonomy.md`
+* `skills/CSV_Taxonomy_Analysis/taxonomy.md`
 
 Pick one. CSV is easier for tooling; Markdown is nicer for eyeballs. Assuming CSV for this document.
 
@@ -55,8 +55,8 @@ Pick one. CSV is easier for tooling; Markdown is nicer for eyeballs. Assuming CS
 
 Same pattern as the sentiment annotator:
 
-* Input: original CSV, e.g. `CSV_Taxonomy_Analysis/raw_input.csv`
-* Output: `CSV_Taxonomy_Analysis/labeled_output.csv`
+* Input: original CSV, e.g. `skills/CSV_Taxonomy_Analysis/raw_input.csv`
+* Output: `skills/CSV_Taxonomy_Analysis/labeled_output.csv`
 
 **`labeled_output.csv` should:**
 

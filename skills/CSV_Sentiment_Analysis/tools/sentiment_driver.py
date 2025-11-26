@@ -7,13 +7,13 @@ It exists to give structure to how the model should think about the task.
 The actual sentiment analysis is performed manually by the model, using
 natural language understanding and following the rules defined in:
 
-    CSV_Sentiment_Analysis/tools/SENTIMENT_ANNOTATOR.md
+    skills/CSV_Sentiment_Analysis/tools/SENTIMENT_ANNOTATOR.md
 
 No code-based sentiment logic is allowed.
 """
 
-INPUT_PATH = "CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv"
-OUTPUT_PATH = "CSV_Sentiment_Analysis/simple_output.csv"
+INPUT_PATH = "skills/CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv"
+OUTPUT_PATH = "skills/CSV_Sentiment_Analysis/sample_output.csv"
 
 # Conceptual maximum chunk size. This is for mental structure only.
 CHUNK_SIZE = 50

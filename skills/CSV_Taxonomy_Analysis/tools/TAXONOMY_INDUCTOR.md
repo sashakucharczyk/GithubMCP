@@ -13,7 +13,7 @@ All instructions you must follow are contained in this file and in the comments/
 ## Inputs and Outputs
 
 **Input CSV (read-only)**  
-- Path: `CSV_Taxonomy_Analysis/raw_input.csv`  
+- Path: `skills/CSV_Taxonomy_Analysis/raw_input.csv`  
 - Contains at least:
   - A unique row identifier column (for example, `ID`).
   - One free-text column to analyze (for example, `Text` or `Review`).  
@@ -23,7 +23,7 @@ All instructions you must follow are contained in this file and in the comments/
 
 1. **Taxonomy definition**
 
-   - Path: `CSV_Taxonomy_Analysis/taxonomy.csv`
+   - Path: `skills/CSV_Taxonomy_Analysis/taxonomy.csv`
    - Columns:
      - `Category ID`  
        - Short machine-friendly identifier (e.g., `C01`, `C02`, or `BILLING_ISSUES`).
@@ -38,7 +38,7 @@ All instructions you must follow are contained in this file and in the comments/
 
 2. **Labeled dataset**
 
-   - Path: `CSV_Taxonomy_Analysis/labeled_output.csv`
+   - Path: `skills/CSV_Taxonomy_Analysis/labeled_output.csv`
    - Must:
      - Preserve all original columns from `raw_input.csv` in the same order.
      - Append the following columns at the end:
@@ -116,8 +116,8 @@ All taxonomy induction and classification must come from direct semantic underst
 
 - Do **not** output summaries, commit messages, testing notes, or file lists.
 - Only produce:
-  - `CSV_Taxonomy_Analysis/taxonomy.csv`
-  - `CSV_Taxonomy_Analysis/labeled_output.csv`
+  - `skills/CSV_Taxonomy_Analysis/taxonomy.csv`
+  - `skills/CSV_Taxonomy_Analysis/labeled_output.csv`
 - Do not print or write any additional files or commentary.
 
 ---
@@ -194,11 +194,11 @@ For each row in `raw_input.csv`:
 
 At the end of the task, you must have produced:
 
-1. `CSV_Taxonomy_Analysis/taxonomy.csv`  
+1. `skills/CSV_Taxonomy_Analysis/taxonomy.csv`  
    - With the columns: `Category ID`, `Category Name`, `Description`, `Inclusion Criteria`, `Example IDs`.
    - With between 5 and 15 well-defined, semantically meaningful categories.
 
-2. `CSV_Taxonomy_Analysis/labeled_output.csv`  
+2. `skills/CSV_Taxonomy_Analysis/labeled_output.csv`  
    - With all original columns from `raw_input.csv` in the same order.
    - With additional columns: `Primary Category ID`, `Secondary Category IDs`, `Classification Reasoning`.
    - With one row per original row, in the original order.
