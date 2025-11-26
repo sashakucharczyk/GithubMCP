@@ -7,10 +7,10 @@ Clean the file test_names_1000.csv based on the Classification
 Overrights the historic classification due to asking for 3 columns instead of asking for four.
 
 ## Instructions
-I want you to use the following file for your instructions: CSV_NLP_Data_Cleaning/Clean_data.md
+I want you to use the following file for your instructions: skills/CSV_NLP_Data_Cleaning/Clean_data.md
 
 
-Use filename: CSV_NLP_Data_Cleaning/test_names_1000.csv
+Use filename: skills/CSV_NLP_Data_Cleaning/test_names_1000.csv
 target_column: Classification
 
 Please classify into only one of three classifications:
@@ -19,7 +19,7 @@ Please classify into only one of three classifications:
 2 - Company
 3 - Animal
 
-Create a new name called CSV_NLP_Data_Cleaning/clean_test_names_classification.csv
+Create a new name called skills/CSV_NLP_Data_Cleaning/clean_test_names_classification.csv
 
 The new column should be called 'Cleaned_Classification'
 
