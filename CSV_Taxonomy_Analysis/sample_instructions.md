@@ -1,7 +1,10 @@
 ## Purpose ##
 
 ## Known Issues ##
-Sampling too large of a subset for the taxonomy causes Codex to crash. Unsure about other CLIs.
+Sampling too large of a subset for the taxonomy causes Codex to crash. Unsure about other CLIs. Works well when breaking into 2 steps (taxonomy creation and then classification using a subsample of less than 200 for class creation).
+
+Reasoning output (explaination) looks to be generic. 
+No use of secondary categories - may need to force.
 
 ## Instructions ##
 Use the instructions in `CSV_Taxonomy_Analysis/tools/taxonomy_driver.py` 
@@ -20,3 +23,5 @@ Do NOT output any summaries, PR notes, test logs, or explanations.
 Only produce the two files:
 - `CSV_Taxonomy_Analysis/taxonomy.csv`
 - `CSV_Taxonomy_Analysis/labeled_output.csv`
+
+

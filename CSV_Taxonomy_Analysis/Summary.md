@@ -1,3 +1,6 @@
+## 0. Preface ##
+Document written when trying to do a sinlge run to handle taxonomy and then classification. Tests are currently working when doing the two in series.
+
 ## 1. Goal: ##
 Given a CSV with a free-text column, the model should:
 
