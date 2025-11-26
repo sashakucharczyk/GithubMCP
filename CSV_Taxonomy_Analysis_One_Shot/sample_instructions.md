@@ -1,7 +1,7 @@
 ## Purpose ##
 
 ## Known Issues ##
-Sampling too large of a subset for the taxonomy causes Codex to crash. Unsure about other CLIs. Works well when breaking into 2 steps (taxonomy creation and then classification using a subsample of less than 200 for class creation).
+Sampling too large of a subset for the taxonomy causes Codex to crash. It seems to work with <200 samples used to create the taxonomy.
 
 Reasoning output (explaination) looks to be generic. 
 No use of secondary categories - may need to force.

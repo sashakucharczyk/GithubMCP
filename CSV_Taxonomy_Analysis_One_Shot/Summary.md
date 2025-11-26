@@ -1,5 +1,5 @@
 ## 0. Preface ##
-Trying to get the Taxonomy to work in a single shot.
+CSV_Taxonomy_Analysis as a single prompt.
 
 ## 1. Goal: ##
 Given a CSV with a free-text column, the model should:
