@@ -1,111 +1,79 @@
-# OpenLLMSkills  
-Reusable, agent-friendly skills for LLMs operating over structured data, files, and repeatable tasks.
+# 📘 **Sentiment Analysis Skill**
 
-**Goal:**  
-Enable LLMs (ChatGPT, Claude, Gemini, etc.) to act like lightweight MCP-style agents using only GitHub folder structure, well-scoped skill instructions, and driver harnesses—no servers or APIs required.
+This skill performs contextual sentiment analysis on text stored in a CSV file.
+It assigns one sentiment label per row and provides a short, text-grounded reasoning.
 
-This repository defines **skills** that an LLM can execute by reading instructions directly from the repo. Each skill is fully contained in its own folder.
+This skill uses **INSTRUCTIONS.md** for its behavioral rules and
+**sentiment_driver.py** as its execution harness.
 
 ---
 
-## 🔧 How the System Works
+## 🔧 **What This Skill Does**
 
-Each skill lives inside:
+Given:
+
+* an input CSV
+* a target text column
+* a user-defined sentiment scale (e.g., `"1–5"`, `"positive/negative"`, `"low/med/high"`)
+* an output CSV path
+
+The skill:
+
+1. Reads each row of the input file.
+2. Interprets the text in the target column using contextual understanding.
+3. Assigns exactly *one* sentiment label from the provided scale.
+4. Writes a brief (1–2 sentence) reasoning referencing the specific row.
+5. Produces a new CSV that preserves the original columns and appends:
+
+   * `Sentiment`
+   * `Reasoning`
+
+All rule-level constraints for how the LLM must behave are defined in `INSTRUCTIONS.md`.
+
+---
+
+## 📂 **Files in This Folder**
 
 ```
-skills/<skill_name>/
-    INSTRUCTIONS.md    # how the skill behaves (rules & constraints)
-    <driver>.py        # the execution harness defining the workflow
+CSV_Sentiment_Analysis/
+│
+├── INSTRUCTIONS.md              # Skill rules, constraints, and allowed behavior
+├── /tools/sentiment_driver.py   # The execution harness for running the skill
+└── README.md                    # (this file)
 ```
 
-The LLM:
-1. Loads the driver.
-2. Follows INSTRUCTIONS.md.
-3. Consumes user-provided parameters.
-4. Executes the task by reading/writing CSVs in the repo.
-5. Produces *only* the output file(s) the skill defines.
-
-This pattern lets LLMs act consistently across:
-- Codex-GitHub integrations
-- ChatGPT file contexts
-- Claude "Tool Use" or "Skills"
-- Gemini Code Execution environment
+No code execution happens inside this folder; the driver file only describes
+the workflow that the LLM must follow.
 
 ---
 
-## 📚 Skills Available
+## 🧠 **How an LLM Should Use This Skill**
 
-### **1. Sentiment Analysis**
-Folder: `skills/CSV_Sentiment_Analysis/`
+When an LLM is instructed to perform sentiment analysis:
 
-Purpose:
-- Read a CSV  
-- Interpret sentiment from a text column  
-- Append a sentiment label + row-specific reasoning  
+1. Load and read **sentiment_driver.py**
+2. Read **INSTRUCTIONS.md**
+3. Wait for the user to supply:
 
-User specifies:
-- input file  
-- output file  
-- text column  
-- sentiment scale (any format, e.g. 1–5 or Positive/Neutral/Negative)
-
----
-
-## 🧩 Adding New Skills
-
-To add a skill:
-
-1. Create a folder under `skills/`
-2. Add:
-   - `INSTRUCTIONS.md` (rules for the LLM)
-   - `<driver>.py` (execution flow)
-3. Update `SKILLS_MANIFEST.md` so selection agents can find it.
-
-A skill should:
-- Define one coherent task  
-- Avoid hardcoded file paths  
-- Be reusable across datasets  
+   * `input_csv`
+   * `output_csv`
+   * `text_column`
+   * `sentiment_labels`
+4. Follow the driver exactly and produce the output CSV.
+5. Output **only** the CSV — no summaries, logs, tests, or commentary.
 
 ---
 
-## 🔍 SKILLS_MANIFEST.md
+## 🧪 **Example Usage (LLM Prompt)**
 
-This file serves as a lightweight directory allowing an LLM to:
+```
+Use the skill in `skills/CSV_Sentiment_Analysis/`.
 
-- Discover available skills  
-- Understand what input/output shapes they operate on  
-- Determine which one(s) match the user request  
+input_csv: data/raw_reviews.csv
+output_csv: data/annotated_reviews.csv
+text_column: Review
+sentiment_labels: ["1","2","3","4","5"]
 
----
-
-## ⚖ License
-
-This project is licensed under the **Apache 2.0 License**, which:
-
-- Allows free use and modification  
-- Permits commercial use  
-- Protects contributors with explicit patent grants  
-- Requires attribution but prevents others from claiming exclusive rights to your work  
-
----
-
-## 🤝 Contributing
-
-Pull requests adding:
-- new skills  
-- better INSTRUCTIONS.md designs  
-- standalone drivers  
-- new reusable patterns  
-
-…are welcome.
-
----
-
-## 💬 Purpose
-
-This repo exists to answer a simple question:
-
-**“Can GitHub itself act as a lightweight agent runtime for general-purpose LLM workflows?”**
-
-Turns out: yes, it can.
-
+Follow the rules in INSTRUCTIONS.md and sentiment_driver.py.
+Only output the annotated CSV.
+```
