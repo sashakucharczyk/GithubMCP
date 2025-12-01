@@ -1,6 +1,6 @@
 # **OpenLLMSkills**
 
-A lightweight framework for building **LLM-driven tools** using nothing more than **GitHub + any coding agent** (e.g., OpenAI Codex Web). No backend, no server, no APIs—just structured instructions, CSV data, and a consistent tool layout.
+A lightweight framework for building **LLM-driven tools** using nothing more than **GitHub + any coding agent** (e.g., OpenAI Codex Web). No backend, no server, no APIs—just structured instructions, CSV data, and a consistent tool layout. Geimini (non-coding agent) is able to directly use the repository by directly referencing it in a prompt.
 
 OpenLLMSkills lets you define reusable “skills” for LLMs in a way that mirrors the functionality of agent frameworks (MCP servers, Claude Skills, LangChain tools) without requiring any developer infrastructure.
 
@@ -76,40 +76,15 @@ This creates a “micro-skill” the LLM can run deterministically.
 
 ## **Current Skills Included**
 
-### **1. Sentiment Analysis Skill**
+Please see: SKILLS_MANIFEST.md for a list of skills.
 
-Folder: `CSV_Sentiment_Analysis/`
-Functionality:
-
-* Reads a CSV with free-text reviews
-* Assigns human-like sentiment (1–5)
-* Provides grounded reasoning
-* Avoids heuristics, scoring systems, or rule-based methods
-
-### **2. CSV Normalization Skill**
-
-Folder: `CSV_Name_Normalization/` (or similar)
-Functionality:
-
-* Groups spelling variants / near-duplicates
-* Suggests unified canonical names
-* Avoids keyword matching
-* Useful for cleaning datasets before modeling
-
-### **3. Taxonomy Induction + Classification Skill**
-
-Folder: `CSV_Taxonomy_Analysis/`
-Functionality:
-
-* Induces a compact taxonomy from a data sample
-* Generates inclusion/exclusion criteria
-* Classifies all rows under that taxonomy
-* Provides per-row reasoning
-* Reusable across any domain
+It should include each skill, a description, and the inputs/outputs expected.
 
 ---
 
 ## **Using OpenLLMSkills**
+
+### ** Non-Gemini **
 
 The recommended workflow:
 
