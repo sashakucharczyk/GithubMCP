@@ -70,21 +70,39 @@ Each skill is implemented as a **folder** with:
    `labeled_output.csv`
    `simple_output.csv`
 
-This creates a “micro-skill” the LLM can run deterministically.
+5. **Skill discovery via SKILLS_MANIFEST.md**  
+   Agents can examine `SKILLS_MANIFEST.md` to determine which skill(s) apply to
+   a user’s request when the user has not specified a skill directly.
 
-The skill should get references in `SKILLS_MANIFEST.md` with the appopriate documents. This allows an agent or LLM to discover the skill if a specific skill is not referenced in the prompt.
+6. **LLM-friendly architecture**  
+   All tasks use standard paths, simple file structures, and CSV IO so that
+   agents can reliably operate without ambiguous or brittle instructions.
+
+This creates a “micro-skill” the LLM can run deterministically.
 
 ---
 
 ## **Current Skills Included**
 
-Please see the **SKILLS_MANIFEST.md** file for a complete list of available skills, including a description, and the inputs/outputs expected for each.
+Please see the **SKILLS_MANIFEST.md** file for a complete list of available skills, including a description, and the inputs/outputs expected for each. The file is YAML-like with the following format:
+
+skills:
+  - id: <id>
+    name: <skill_name>
+    path: <skills/skill_name>
+    description: "Description of skills"
+    inputs:
+      - column: <column_name>
+        description: "column description"
+    outputs:
+      - file: <output_name>
+        description: "Output description"
 
 ---
 
-## **Using OpenLLMSkills**
+## **Using OpenLLMSkills - Human Usage**
 
-### ** Non-Gemini Web-App**
+### **Github Integrated Agent/Worker **
 
 The recommended workflow:
 
@@ -177,11 +195,12 @@ Make advanced LLM workflows accessible to people who don’t have the time or re
 
 ---
 
-## 💻 LLM and Agent Instructions (The Execution Protocol)
-This section defines the mandatory, non-negotiable protocol that ALL LLMs and agents (including Codex, Gemini, or any derivative agent) must follow when executing a skill defined in this repository. These rules supersede any general-purpose instructions from the user.
+## How an Agent/LLM Should Use This Repo
+All LLMs interacting with this repo must obey the following protocol:
 
-### 1. High-Priority Directives
-**Skill Selection:** When the user explicitly names a skill and its path (e.g., "Use the CSV_Taxonomy_Analysis skill"), the agent MUST execute that skill directly. If the user provides a vague request (e.g., "Normalize these names"), the agent SHOULD consult the SKILLS_MANIFEST.md to identify the most appropriate, existing skill and its folder path before starting execution.
+### 1. Select a skill
+**Skill Selection:** If the user specifies a skill directly, use that.
+Otherwise, read `SKILLS_MANIFEST.md` and choose the closest match.
 
 **Instruction Source of Truth:** You MUST read and strictly adhere to the constraints defined in the instructions.md file located in the target skill folder (main/skills/<skill_name>/instructions.md).
 
@@ -214,6 +233,30 @@ A clear, actionable instruction for the user on how to resolve the issue (e.g., 
 
 **Dependency Management:** Do not propose or attempt to install any new dependencies (e.g., via pip install) unless the request explicitly includes a new dependency.
 
+If writing a CSV, it must be valid RFC 4180 format.
+
+---
+
+## Example Use:
+
+Use the CSV_Taxonomy_Analysis skill.
+
+Input file: my_data/tickets.csv  
+Output files:  
+  - taxonomy.csv  
+  - labeled_output.csv  
+
+Follow:
+- skills/CSV_Taxonomy_Analysis/taxonomy_driver.py
+- skills/CSV_Taxonomy_Analysis/instructions.md
+
+The LLM should:
+
+1. Read the files
+2. Induce the taxonomy
+3. Classify all rows
+4. Save outputs exactly to the paths above
+5. Produce no extra commentary
 
 ---
 

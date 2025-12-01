@@ -1,0 +1,57 @@
+# Sentiment Analysis Skill — Instructions
+
+This skill reads a CSV file and assigns a sentiment score and reasoning to each row based on a specified text column.
+
+## Purpose
+To classify natural-language text into sentiment categories defined by the user, using contextual, human-like interpretation rather than rule-based or keyword-based logic.
+
+## What This Skill Does
+- Reads each row from a CSV.
+- Interprets the text in a specified input column.
+- Assigns exactly one sentiment label per row.
+- Writes a new CSV with:
+  - the original columns (unchanged)
+  - a sentiment label column
+  - a reasoning column
+
+## What You (the LLM) Must Do
+When annotating rows:
+1. Read the text as natural language.
+2. Infer sentiment using contextual understanding.
+3. Write:
+   - A sentiment label from the user-defined scale.
+   - A short reasoning (1–2 sentences) grounded in the row’s text.
+
+## Hard Rules
+These rules override all other considerations:
+
+### 🍂 **Forbidden Approaches**
+You may **NOT**:
+- create new source code files  
+- modify existing source code files  
+- use predefined sentiment lexicons  
+- use keyword lists or token-matching  
+- implement algorithms, scoring functions, or rule systems  
+- compute hidden numeric scores  
+- rely on pattern templates for reasoning  
+- generate summaries or commentary outside the output CSV  
+
+### 🌿 **Required Behavior**
+- Sentiment must be based on *meaning*, not word presence.
+- Reasoning must be *row-specific*, not templated.
+- Output must preserve:
+  - row order
+  - original columns
+  - CSV formatting integrity
+
+## Output Format Requirements
+The final CSV must append two new columns:
+
+1. `Sentiment`
+2. `Reasoning`
+
+Each row must have exactly one sentiment label.
+
+## Notes
+- The sentiment labels (e.g., 1–5, or custom strings) will be specified by the user at runtime.
+- All file paths and driver-level instructions are defined in `sentiment_driver.py`.

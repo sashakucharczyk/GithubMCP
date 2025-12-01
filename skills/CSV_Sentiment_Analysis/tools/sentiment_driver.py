@@ -1,106 +1,65 @@
 """
-Driver scaffold for sentiment annotation.
+Sentiment Driver — Execution Harness
 
-This file is NOT meant to be executed as real Python in this environment.
-It exists to give structure to how the model should think about the task.
+This driver file defines how the LLM should perform sentiment analysis on a CSV
+using the skill instructions found in INSTRUCTIONS.md.
 
-The actual sentiment analysis is performed manually by the model, using
-natural language understanding and following the rules defined in:
+The LLM must follow these steps exactly and must not deviate from them.
 
-    skills/CSV_Sentiment_Analysis/tools/SENTIMENT_ANNOTATOR.md
+===============================================================================
+1. USER-SPECIFIED PARAMETERS (supplied in the prompt calling this driver)
+===============================================================================
 
-No code-based sentiment logic is allowed.
+The user must provide:
+- input_csv: path to the CSV file to read
+- output_csv: path to write the annotated CSV
+- text_column: name of the column containing text to analyze
+- sentiment_labels: ordered list of allowed sentiment labels (e.g., ["1","2","3","4","5"])
+
+===============================================================================
+2. WHAT THE LLM MUST DO
+===============================================================================
+
+1. Load the input CSV (read-only).
+2. For each row:
+    a. Read the text in text_column.
+    b. Interpret the sentiment using contextual understanding.
+    c. Assign exactly one sentiment label from sentiment_labels.
+    d. Write a reasoning sentence grounded in the row’s text.
+3. Create a new CSV that:
+    - preserves all original columns and ordering
+    - appends:
+        Sentiment
+        Reasoning
+4. Save the CSV to output_csv (write-only).
+
+===============================================================================
+3. HARD CONSTRAINTS
+===============================================================================
+
+- Do NOT create or modify any source code files.
+- Do NOT implement algorithms, keyword rules, or sentiment lexicons.
+- Do NOT compute internal numeric sentiment scores.
+- Do NOT summarize, describe, or explain the results outside the output CSV.
+- Do NOT reorder or modify the original columns.
+
+===============================================================================
+4. ANNOTATION LOGIC
+===============================================================================
+
+The LLM must:
+- treat each row independently
+- base sentiment on meaning, tone, and context
+- produce 1–2 sentence reasoning that references the text
+- avoid boilerplate templates
+
+===============================================================================
+5. OUTPUT
+===============================================================================
+
+The final and ONLY output of this task must be the CSV written to output_csv.
+No tests, no summaries, no commentary.
 """
 
-INPUT_PATH = "skills/CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv"
-OUTPUT_PATH = "skills/CSV_Sentiment_Analysis/sample_output.csv"
-
-# Conceptual maximum chunk size. This is for mental structure only.
-CHUNK_SIZE = 50
-
-
-def annotate_chunk(csv_chunk: str) -> str:
-    """
-    MODEL INSTRUCTIONS (READ CAREFULLY):
-
-    This function is NOT real Python logic. Its body will not be executed.
-    Instead, you (the model) must conceptually "execute" this function by
-    directly producing annotated CSV content for a small chunk of rows.
-
-    You must act as a human annotator, not as a programmer.
-
-    Input:
-        - csv_chunk: a small CSV segment as text, including the header row
-          and up to CHUNK_SIZE data rows from INPUT_PATH.
-
-    Behavior:
-        - You are NOT allowed to write or modify any code here.
-        - You are NOT allowed to design or use any heuristics, rules,
-          word lists, lexicons, or numeric scoring systems.
-        - You are NOT allowed to call or emulate external sentiment
-          libraries or models.
-        - You must ignore any pre-existing sentiment labels in other files.
-        - You must follow ALL rules from SENTIMENT_ANNOTATOR.md.
-
-    Task inside this function:
-        1. For each data row in csv_chunk, read the Review column.
-        2. Determine the sentiment as a human annotator would:
-           - 1 = very negative
-           - 2 = negative
-           - 3 = neutral / mixed
-           - 4 = positive
-           - 5 = very positive
-        3. Append two columns to each row:
-           - Estimated Sentiment (integer 1–5)
-           - Reasoning (1–2 sentences explaining why, grounded in the text)
-        4. Preserve:
-           - The original header columns, in order.
-           - The row order.
-        5. Return a CSV string that:
-           - Includes the header row.
-           - Includes all original columns plus the two new ones.
-           - Contains ONLY the rows from this chunk.
-
-    Absolutely forbidden inside this function:
-        - Defining or using positive/negative word lists.
-        - Designing scoring formulas, negation windows, or intensifier rules.
-        - Counting tokens to determine sentiment.
-        - Reusing prior labels from any file.
-        - Generating code or pseudo-code.
-
-    You must "replace" the body of this function with the final annotated
-    CSV text for the chunk when conceptually executing it.
-    """
-    # MODEL: Do NOT write real Python here.
-    # When conceptually "executing" this function, you will directly
-    # produce the annotated CSV text for the chunk instead.
-    raise NotImplementedError
-
-
-def main():
-    """
-    Conceptual driver:
-
-    If this were executable, it would:
-
-        1. Read INPUT_PATH as a CSV.
-        2. Split the rows into chunks of at most CHUNK_SIZE rows each.
-        3. For each chunk:
-            - Convert the chunk to CSV text (with header).
-            - Call annotate_chunk(chunk_csv_text) to get the annotated text.
-        4. Concatenate all annotated chunks (minus duplicate headers) in order.
-        5. Write the combined result to OUTPUT_PATH.
-
-    In this environment, you (the model) must directly produce the final
-    contents of OUTPUT_PATH as if this process had been executed exactly
-    according to SENTIMENT_ANNOTATOR.md and annotate_chunk()'s rules.
-
-    You MUST NOT actually implement this logic as executable Python.
-    Instead, you must write out the final CSV that would be the result of
-    this conceptual process.
-    """
-    pass
-
-
-if __name__ == "__main__":
-    main()
+# No executable code is required.
+# This file exists solely as a driver specification for the LLM.

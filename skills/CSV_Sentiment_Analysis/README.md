@@ -1,63 +1,111 @@
-# CSV Sentiment Analysis Skill
+# OpenLLMSkills  
+Reusable, agent-friendly skills for LLMs operating over structured data, files, and repeatable tasks.
 
-## Overview
-This skill applies human-style sentiment assessment to each row of a CSV file.
-The model reads natural language text (e.g., reviews) and assigns a sentiment
-score from 1 to 5, along with a short explanation grounded in the text. It does
-not use heuristics, keyword lists, or rule-based scoring.
+**Goal:**  
+Enable LLMs (ChatGPT, Claude, Gemini, etc.) to act like lightweight MCP-style agents using only GitHub folder structure, well-scoped skill instructions, and driver harnesses—no servers or APIs required.
 
-## Folder Contents
-- `sentiment_driver.py` – Driver instructions for Codex.
-- `SENTIMENT_ANNOTATOR.md` – Specification and constraints.
-- `reviews_1000_v2_no_labels.csv` – Example input data.
-- `simple_output.csv` – Example output.
+This repository defines **skills** that an LLM can execute by reading instructions directly from the repo. Each skill is fully contained in its own folder.
 
-## Input Format
-The input CSV must include a column named:
-- `Review`
+---
 
-This column contains the free-text content to analyze.
+## 🔧 How the System Works
 
-## Output Format
-The output CSV contains:
-1. All original columns in their original order.
-2. Two new appended columns:
-   - `Estimated Sentiment` (integer 1–5)
-   - `Reasoning` (1–2 sentence justification)
+Each skill lives inside:
 
-## How to Invoke the Skill
-Example invocation via Codex:
+```
+skills/<skill_name>/
+    INSTRUCTIONS.md    # how the skill behaves (rules & constraints)
+    <driver>.py        # the execution harness defining the workflow
+```
 
-Use the instructions in:
+The LLM:
+1. Loads the driver.
+2. Follows INSTRUCTIONS.md.
+3. Consumes user-provided parameters.
+4. Executes the task by reading/writing CSVs in the repo.
+5. Produces *only* the output file(s) the skill defines.
 
-skills/CSV_Sentiment_Analysis/sentiment_driver.py
-skills/CSV_Sentiment_Analysis/SENTIMENT_ANNOTATOR.md
+This pattern lets LLMs act consistently across:
+- Codex-GitHub integrations
+- ChatGPT file contexts
+- Claude "Tool Use" or "Skills"
+- Gemini Code Execution environment
 
-Process:
-skills/CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv
+---
 
-Write results to:
-skills/CSV_Sentiment_Analysis/simple_output.csv
+## 📚 Skills Available
 
-## Hard Constraints
-- No creation or modification of any code files.
-- No summaries, logs, or commentary; output only the final CSV.
-- No heuristic keyword lists, polarity dictionaries, or scoring algorithms.
-- No intermediate numerical sentiment calculations.
-- Sentiment decisions must be based on natural language understanding.
+### **1. Sentiment Analysis**
+Folder: `skills/CSV_Sentiment_Analysis/`
 
-## Skill Logic Summary
-The model reads each review as a human would, interprets tone and context, and
-assigns a sentiment score directly without numerical scoring logic. Reasoning is
-explicit and specific to each review.
+Purpose:
+- Read a CSV  
+- Interpret sentiment from a text column  
+- Append a sentiment label + row-specific reasoning  
 
-## Examples
-Input:
+User specifies:
+- input file  
+- output file  
+- text column  
+- sentiment scale (any format, e.g. 1–5 or Positive/Neutral/Negative)
 
-ID,Review
-12,"App works sometimes, but freezes often."
+---
 
-Output:
-D,Review,Estimated Sentiment,Reasoning
-12,"App works sometimes, but freezes often.",2,
-"The reviewer expresses ongoing frustration with instability despite minor functionality."
+## 🧩 Adding New Skills
+
+To add a skill:
+
+1. Create a folder under `skills/`
+2. Add:
+   - `INSTRUCTIONS.md` (rules for the LLM)
+   - `<driver>.py` (execution flow)
+3. Update `SKILLS_MANIFEST.md` so selection agents can find it.
+
+A skill should:
+- Define one coherent task  
+- Avoid hardcoded file paths  
+- Be reusable across datasets  
+
+---
+
+## 🔍 SKILLS_MANIFEST.md
+
+This file serves as a lightweight directory allowing an LLM to:
+
+- Discover available skills  
+- Understand what input/output shapes they operate on  
+- Determine which one(s) match the user request  
+
+---
+
+## ⚖ License
+
+This project is licensed under the **Apache 2.0 License**, which:
+
+- Allows free use and modification  
+- Permits commercial use  
+- Protects contributors with explicit patent grants  
+- Requires attribution but prevents others from claiming exclusive rights to your work  
+
+---
+
+## 🤝 Contributing
+
+Pull requests adding:
+- new skills  
+- better INSTRUCTIONS.md designs  
+- standalone drivers  
+- new reusable patterns  
+
+…are welcome.
+
+---
+
+## 💬 Purpose
+
+This repo exists to answer a simple question:
+
+**“Can GitHub itself act as a lightweight agent runtime for general-purpose LLM workflows?”**
+
+Turns out: yes, it can.
+
