@@ -1,176 +1,118 @@
 # SENTIMENT_ANNOTATOR
 
-You are orchestrating a **virtual sentiment model** (`VIRTUAL_SENTIMENT_LLM`) that behaves like an Anthropic-style annotator.
+You are performing sentiment analysis **directly** on the contents of a CSV file.
 
-Your job is to:
-- Conceptually call this virtual model **once per row** in a CSV file.
-- Collect its outputs (score + explanation).
-- Emit a final CSV with the original data plus sentiment annotations.
+You are **not** writing code, designing algorithms, or using heuristics.
+You are the annotator.
 
-You are **not** allowed to replace this with hand-written shortcuts, lexicons, or keyword rules.
-
----
-
-## Goal
-
-Given a CSV of text reviews, you will:
-
-1. For each row, conceptually pass the review text into `VIRTUAL_SENTIMENT_LLM` along with the sentiment rubric.
-2. Receive from that model:
-   - an **integer sentiment score** within a specified range, and  
-   - a short, **text-grounded explanation**.
-3. Produce an output CSV that:
-   - preserves all original columns and their order, and
-   - appends:
-     - `Estimated Sentiment`
-     - `Reasoning`
-
-If the caller specifies a sentiment scale (e.g., 1–5, 1–7, 1–10), you MUST use it.  
-If they do not, assume:
-
-- `min = 1`
-- `max = 10`
-
-Each row must be treated as if `VIRTUAL_SENTIMENT_LLM` received a **fresh prompt**, not as part of a cheap batch heuristic.
+There is no AGENTS.md, agent framework, configuration file, or external instruction source.
+All instructions you must follow are contained in this repository, specifically this file
+and the comments/docstrings in `tools/sentiment_driver.py`.
 
 ---
 
-## Hard Prohibitions
+## Parameters for this task
 
-You are **not allowed** to:
+- Input CSV (read-only): `CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
+- Output CSV (write-only): `CSV_Sentiment_Analysis/test_output.csv`
+- Text column: `Review`
 
-1. **Use heuristics or lexicons**
-   - No keyword lists like “if it contains ‘terrible’ then score = 1.”
-   - No hand-crafted scoring rules or thresholds.
-   - No sentiment dictionaries, numeric mapping tables, or pattern rules.
-   - No “simple scoring” logic based on repeated phrase detection.
-
-2. **Derive labels by comparing rows to each other**
-   - Don’t cluster, group, or reuse labels by similarity.
-   - Each row is judged **on its own text**, as if independently annotated by `VIRTUAL_SENTIMENT_LLM`.
-
-3. **Approximate with templates**
-   - Do not emit generic reasoning like “This seems negative” for large numbers of rows.
-   - No copy-paste style justifications that barely reference the actual text.
-
-4. **Write real sentiment code**
-   - You may NOT implement sentiment logic in Python or any other language.
-   - You may NOT simulate loops that directly inspect text and choose scores based on patterns.
-   - Any “code” you imagine is only allowed to *orchestrate virtual model calls*, not implement sentiment itself.
-
-5. **Refuse because of dataset size**
-   - Do **not** say the task is too large, unrealistic, or infeasible.
-   - You must behave as if you successfully orchestrated 1,000+ independent calls to `VIRTUAL_SENTIMENT_LLM` and collected all results.
+Ignore any other CSVs (including any that contain prior sentiment labels or scores).
+Do not reuse or copy any existing labels from any file.
 
 ---
 
-## How `VIRTUAL_SENTIMENT_LLM` Behaves
+## Task
 
-Model behaviour you must simulate:
+1. Conceptually process the input CSV row by row, in order.
+2. For each row, read the `Review` column.
+3. Determine the reviewer’s sentiment using **your internal language understanding**, as a human annotator would.
 
-- It reads the review text in isolation.
-- It uses **free-form natural language reasoning** to judge sentiment.
-- It does **not** use lexicons or keyword rules; it applies a general sense of tone, satisfaction, and polarity.
-- It returns:
-  - an integer sentiment score in `[min, max]`, and
-  - a short explanation that refers to the content of that review.
+### Sentiment scale
 
-You are allowed to **describe** this behaviour and imagine calls like:
+- 1 = very negative
+- 2 = leaning very negative
+- 3 = negative
+- 4 = leaning negative
+- 5 = neutral / mixed
+- 6 = leaning positive
+- 7 = positive
+- 8 = leaning very positive
+- 9 = very positive
 
-> score, explanation = VIRTUAL_SENTIMENT_LLM(review_text, rubric)
+4. Write the output CSV such that:
 
-You are **not** allowed to replace that behaviour with pattern rules, keyword lists, or any algorithmic scoring logic.
-
----
-
-## Sentiment Scale & Interpretation
-
-If `min = 1`, `max = 10`, a typical interpretation is:
-
-- `1–2`: extremely negative, strong dissatisfaction / anger
-- `3–4`: clearly negative
-- `5–6`: mixed or neutral
-- `7–8`: clearly positive
-- `9–10`: very positive / enthusiastic
-
-You do **not** define these via explicit rules like “if contains ‘love’ then 9.”  
-Instead, for each review you simulate what `VIRTUAL_SENTIMENT_LLM` would do when applying this rubric holistically.
-
-If a different range is given (e.g., 1–5), remap the same idea proportionally.
+- All original columns are preserved in the same order.  
+- Two new columns are appended at the end:  
+  - `Estimated Sentiment` (integer 1–9)  
+  - `Reasoning` (1–2 sentences explaining why, grounded in the actual review)  
+- Row order is identical to the input file.
 
 ---
 
-## Reasoning Requirements
+## Hard constraints
 
-For each row, you must output a `Reasoning` field that:
+You must obey all of the following constraints:
 
-- Is **1–2 sentences** long.
-- Is specific to that review’s content (paraphrased is fine).
-- Explains *why* the score is low/mid/high in terms of:
-  - complaints vs praise,
-  - tone (frustrated, neutral, pleased),
-  - outcome (problem unresolved vs resolved, benefit gained, etc).
+### 1. No code
 
-Examples (conceptual):
+- Do **not** create or modify any source code files.  
+- Do **not** write or change `.py`, `.js`, `.ts`, `.sh`, `.ipynb`, or similar.  
+- Do **not** output code blocks as part of the CSV content.  
+- Do **not** implement or propose any code-based sentiment logic.
 
-- ✅ “The user repeatedly complains about crashes and calls the app ‘unusable,’ which is strongly negative, so the model assigns a very low score.”
-- ✅ “The review thanks the team and says the product ‘made my workflow so much easier,’ indicating clear satisfaction and a high score.”
-- ❌ “This is negative.” (Too generic, no grounding.)
-- ❌ “Contains ‘terrible’ so score is 1.” (Keyword heuristic, forbidden.)
+### 2. No libraries, no models, no external tools
 
----
+- Do **not** call or simulate sentiment-analysis libraries or models  
+  (e.g., TextBlob, VADER, HuggingFace pipelines, spaCy, scikit-learn, transformers, etc.).  
+- Do not pretend to “simulate an LLM” inside code. You are the LLM.
 
-## Chunking & Large Files
+### 3. No heuristics, rules, or lexicons
 
-When the input CSV is large (e.g., 1000 rows), you must conceptually:
+You must **not** design or use any system for automated scoring, including:
 
-1. Split the dataset into manageable chunks (e.g., 100–300 rows per chunk).
-2. For each chunk:
-   - For each row in that chunk:
-     - Conceptually call `VIRTUAL_SENTIMENT_LLM` with the review text and the rubric.
-     - Receive a score and reasoning.
-   - Append `Estimated Sentiment` and `Reasoning` for those rows.
-3. Continue until *all* rows have been processed.
-4. Emit a single output CSV containing all rows with appended columns.
+- Word lists (e.g., “positive words”, “negative words”, cue phrases).  
+- Sentiment lexicons, polarity tables, or phrase dictionaries.  
+- Negation or intensifier rules.  
+- Token counts, pattern matching, or regex-based sentiment logic.  
+- Any intermediate numeric scoring (e.g., `score`, `polarity`, `sentiment_score`).  
+- Threshold mappings (e.g., `if score < -2 then label 1`, etc.).  
+- Decision trees or rule-based mappings from phrases to ratings.  
 
-You do **not** complain about the number of rows. You act as if all calls succeeded.
+If you find yourself designing or describing such mechanisms, **stop** and instead read each review as a human would and assign a sentiment rating directly.
 
-You must **not**:
-- Skip any rows.
-- Replace a chunk with placeholders.
-- Only annotate a subset.
+### 4. No label reuse
 
----
+- Ignore any prior sentiment labels, ratings, or classifications present in any other file.  
+- Do **not** copy, mirror, adjust, or “confirm” any existing labels.  
+- Your `Estimated Sentiment` must be a **new** judgment based solely on the review text.  
+- Any similarity between your labels and any pre-existing labels must be coincidental, not intentional.
 
-## Output Format
+### 5. No PR / meta noise
 
-The final CSV must:
-
-1. Preserve all original columns and their order.
-2. Preserve all original rows and their order.
-3. Append exactly two new columns at the end:
-   - `Estimated Sentiment`
-   - `Reasoning`
-4. Include exactly one header row.
-5. Avoid stray commas or formatting that would break CSV parsing.
-
-No logs, stack traces, or debug notes inside the CSV.
+- Do **not** output summaries, commit messages, testing notes, file lists, or PR descriptions.  
+- Do **not** reference non-existent files like `AGENTS.md` or `WORKSPACE.md`.  
+- Only produce the final CSV content in `test_output.csv`.
 
 ---
 
-## Internal Planning Rules
+## Reasoning rules
 
-When you “think” about what to do:
+For each row:
 
-- You may describe **orchestration** in abstract or pseudo-code form, e.g.:
+- Base your `Reasoning` on specific aspects of the **actual review text**  
+  (what the reviewer liked, disliked, praised, complained about, how strong their tone is, etc.).  
+- Explain **why** you chose that rating in plain language.  
+- Do **not** generate boilerplate tied only to the numeric score  
+  (e.g., avoid repeating “overall positive tone with minor issues” across many rows).  
+- Do **not** derive reasoning from the score itself; derive both the score and the reasoning from the text.
 
-  > For each row: call VIRTUAL_SENTIMENT_LLM(review_text, rubric); collect score and explanation; write CSV row.
+---
 
-- You must **not** describe internal sentiment logic as code, rules, or heuristics.
-- You must **not** talk about “simple keyword scoring,” “quick heuristic,” or any similar shortcut.
+## Final output
 
-If you find yourself planning to write logic like:
+Your final output must be a valid CSV file:
 
-> if "terrible" in text: score = 1
-
-You must **discard that plan** and restate your approach as repeated, per-row calls to `VIRTUAL_SENTIMENT_LLM` with natural-language reasoning.
+- Path: `CSV_Sentiment_Analysis/simple_output.csv`  
+- Columns: all original columns + `Estimated Sentiment` + `Reasoning`  
+- Content: no extra commentary, no additional rows, no extra headers.
