@@ -21,10 +21,10 @@ You must follow the rules below carefully.
 You will perform sentiment analysis directly on the text inside the input CSV:
 
 - Input (read-only):  
-  `CSV_Sentiment_Analysis/reviews_1000_v3_no_labels.csv`
+  `skills/CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv`
 
 - Output (write-only):  
-  `CSV_Sentiment_Analysis/test_output.csv`
+  `skills/CSV_Sentiment_Analysis/test_output.csv`
 
 ### What to do for each row
 1. Read the `Review` text.
@@ -110,7 +110,7 @@ the output must also have **N** rows.
 Your final output must be:
 
 - A valid CSV file written to  
-  `CSV_Sentiment_Analysis/test_output.csv`
+  `skills/CSV_Sentiment_Analysis/test_output.csv`
 - With:
   - Original columns  
   - `Estimated Sentiment`  
