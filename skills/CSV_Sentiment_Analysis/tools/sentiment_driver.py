@@ -3,17 +3,20 @@ sentiment_driver.py
 
 This file is documentation ONLY.
 
-It is not to be implemented, completed, or used as real Python code by the model.
-The functions, constants, and control flow described here are conceptual.
+It describes the intended behavior conceptually.
+You MUST NOT implement, modify, or simulate this file as real Python code.
+You MUST NOT write any new code, scripts, or pseudocode to perform this task.
 
-When following this repository, you MUST NOT:
-- write any executable Python,
-- simulate running this file,
-- or design new helper code to perform sentiment analysis.
+For this environment, you must assume:
+- The entire input CSV is already available to you.
+- You can annotate ALL rows directly, regardless of how many there are (e.g., 1,000+).
+- Your only responsibility is to produce the final CSV contents that would be
+  written to OUTPUT_PATH.
 
-Your only job is to directly produce the final annotated CSV described in
-Instructions.md, as if a human annotator had done the work.
+Do not discuss feasibility, time, or practicality.
+Do not discuss checking the filesystem or repo structure.
 """
+
 
 INPUT_PATH = "CSV_Sentiment_Analysis/reviews_1000_v2_no_labels.csv"
 OUTPUT_PATH = "CSV_Sentiment_Analysis/test_output.csv"
@@ -88,19 +91,16 @@ def main():
     """
     Conceptual driver:
 
-    If this were executable, it would:
+    Conceptually, an implementation would:
 
-        1. Read INPUT_PATH as a CSV.
-        2. Split the rows into chunks of at most CHUNK_SIZE rows each.
-        3. For each chunk:
-            - Convert the chunk to CSV text (with header).
-            - Call annotate_chunk(chunk_csv_text) to get the annotated text.
-        4. Concatenate all annotated chunks (minus duplicate headers) in order.
-        5. Write the combined result to OUTPUT_PATH.
+        - Read INPUT_PATH as a CSV.
+        - Annotate every row with sentiment and reasoning.
+        - Write the complete annotated CSV to OUTPUT_PATH.
 
-    In this environment, you (the model) must directly produce the final
-    contents of OUTPUT_PATH as if this process had been executed exactly
-    according to SENTIMENT_ANNOTATOR.md and annotate_chunk()'s rules.
+    In this environment, you skip all code and directly produce the final
+    annotated CSV as your response. The number of rows in the output must
+    match the number of input data rows.
+
 
     You MUST NOT actually implement this logic as executable Python.
     Instead, you must write out the final CSV that would be the result of
