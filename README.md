@@ -1,5 +1,7 @@
 # **OpenLLMSkills**
 
+** CURRENTLY BROKEN AS I REFACTOR**
+
 A lightweight framework for building **LLM-driven tools** using nothing more than **GitHub + any coding agent** (e.g., OpenAI Codex Web). No backend, no server, no APIs—just structured instructions, CSV data, and a consistent tool layout. Gemini (non-coding agent) is able to directly use the repository by directly referencing it in a prompt; however, it may be delayed in be able to access/use any recent changes.
 
 OpenLLMSkills lets you define reusable “skills” for LLMs in a way that mirrors the functionality of agent frameworks (MCP servers, Claude Skills, LangChain tools) without requiring any developer infrastructure.
