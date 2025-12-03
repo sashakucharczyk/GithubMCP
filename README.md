@@ -1,6 +1,7 @@
 # **OpenLLMSkills**
 
 ** CURRENTLY BROKEN AS I REFACTOR**
+note: generalization failed. Coding agents need specific instructions to avoid keyword matching/heuristics and Gemini web will reject anything that looks to much like it is being told to be an agent.
 
 A lightweight framework for building **LLM-driven tools** using nothing more than **GitHub + any coding agent** (e.g., OpenAI Codex Web). No backend, no server, no APIs—just structured instructions, CSV data, and a consistent tool layout. Gemini (non-coding agent) is able to directly use the repository by directly referencing it in a prompt; however, it may be delayed in be able to access/use any recent changes.
 
